@@ -26,11 +26,12 @@
         color: #ffffff;
       }
     </style>
-    <script src="http://threejs.org/build/three.js"></script>
+    <script src="/three.min.js"></script>
   </head>
   <body>
-    <div id="container"></div>
-    <script src="viewer.js"></script>
+    <div id="container">
+    </div>
+    <script src="viewer.min.js"></script>
     <script>
 function getPanoImage(name, url) {
     if (!url) url = window.location.href;
@@ -42,7 +43,7 @@ function getPanoImage(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-      panoIt('container', 'pano/' + getPanoImage('pano').replace('/', ''));
+panoIt('container', 'pano/' + getPanoImage('pano').replace('/', ''));
     </script>
   </body>
 </html>
